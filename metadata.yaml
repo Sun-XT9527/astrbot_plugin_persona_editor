@@ -1,0 +1,11 @@
+name: astrbot_plugin_persona_editor
+display_name: 人格进化（仅人设）
+author: Sun-XT9527
+version: v0.3.0
+desc: 白天收集明确反馈，每天北京时间23点集中比较一次，审核后只写人格设定，支持回退。
+astrbot_version: '>=4.29.1,<5'
+repo: https://github.com/Sun-XT9527/astrbot_plugin_persona_editor
+social_link: https://github.com/Sun-XT9527
+tags:
+  - 人格
+  - AI增强

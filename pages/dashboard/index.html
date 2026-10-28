@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>人格进化</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div><p class="eyebrow">大肥鱼 · 人格进化</p><h1>把反馈变成更好的相处方式</h1><p class="muted">从明确反馈形成互动习惯。核心人设保留，审核后写入「人格设定」。</p></div><button id="refresh">刷新记录</button></header>
+<p id="notice" role="status" aria-live="polite">正在连接…</p>
+<section class="overview"><article><span>当前状态</span><strong id="state">—</strong><small id="settings">—</small></article><article><span>写入方式</span><strong>审核后生效</strong><small>每次保留修改前版本，可以回退</small></article><article><span>待审建议</span><strong id="pending">—</strong><small>对照没有改善时，原人设保持原样</small></article></section>
+<section class="panel"><h2>提交一段反馈</h2><p class="muted">也可以直接在与大肥鱼的私聊中表达长期偏好。白天只收集反馈，到每日固定时间集中分析。</p><p id="queued" class="muted">—</p><label>目标人格<select id="persona"></select></label><label>原始反馈<textarea id="feedback" maxlength="1500" rows="3" placeholder="例如：以后回复简短一点，别在每次结尾都追问。"></textarea></label><div class="row"><button id="analyze" class="primary">保存反馈，等待每日分析</button><span class="muted">每天最多分析一次；完整分析最多调用 8 次模型，审核后才写入人设。</span></div></section>
+<section class="panel"><h2>改进建议与版本</h2><p class="muted">模型评分仅供辅助判断。展开建议，核对反馈依据、文字差异和对照回复，再决定是否采用。</p><div id="proposals"></div></section>
+<section class="panel"><h2>分析记录</h2><div id="attempts"></div></section>
+</main><script defer src="app.js"></script></body></html>

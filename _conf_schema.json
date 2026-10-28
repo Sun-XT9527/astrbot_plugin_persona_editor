@@ -1,0 +1,30 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "允许提出和应用人格修改",
+    "default": true,
+    "hint": "关闭后禁止新建议和人格写入；原有审核记录保留。"
+  },
+  "persona_ids": {
+    "type": "list",
+    "description": "允许修改的人格名称",
+    "default": ["笨蛋大肥鱼"],
+    "hint": "必须与 AstrBot 人格设定中的名称完全一致；修改共享人格会影响使用该人格的所有会话。"
+  },
+  "auto_propose": {
+    "type": "bool", "description": "从私聊反馈自动提出建议", "default": true,
+    "hint": "回复发送后只收集明确的长期互动反馈，到每日固定时间集中分析一次；审核后才写入人设。"
+  },
+  "feedback_users": {
+    "type": "list", "description": "允许提供人格反馈的用户 ID", "default": [],
+    "hint": "管理员始终可以提供反馈；此列表只开放提出建议，不授予批准或其他管理权限。"
+  },
+  "provider_id": {
+    "type": "string", "description": "反思与对照模型", "default": "",
+    "hint": "留空跟随所收集反馈的会话模型；每日一次完整分析最多调用 8 次模型，包含 3 组对照回复和审查。"
+  },
+  "daily_time": {
+    "type": "string", "description": "每日分析时间（北京时间）", "default": "23:00",
+    "hint": "格式 HH:MM。每天最多分析一次；白天只收集反馈，手动提交也不提前分析。无新反馈或有待审建议时不调用模型。修改后重载插件生效。"
+  }
+}
